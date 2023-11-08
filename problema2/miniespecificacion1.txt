@@ -1,0 +1,26 @@
+ Inicio
+ articulo_descripcion, x(30) [{A-Z}, {a-z}, {BS}]
+ cantidad_articulo, i[0, n]
+ precio_unidad, d[0, n]
+ descuento, d[0-100]
+ descuento<-- 0.15
+ total, d[0- n]
+ Escribir "Ingrese la descripción del artículo"
+ Leer articulo_descripcion
+ Escribir "Ingrese la cantidad requerida"
+ Leer cantidad_articulo
+ Escribir "Ingrese el precio unitario del artículo"
+ Leer precio_unidad
+ total <--cantidad_articulo * precio_unidad
+Si  cantidad_articulo >50 entonces 
+    descuento<-- total * 0.15
+    total<-- total - descuento 
+    Escribir "El precio a pagar en "+cantidad_articulo" articulos de                                                                                                                                
+                "+articulo_descripcion" con precio de "+precio_unidad"
+                  aplicando descuento es: "+total
+De lo contrario
+    Escribir "El precio a pagar en "+cantidad_articulo" articulos de                                                                                                                                
+                "+articulo_descripcion" con precio de "+precio_unidad aplicando 
+                  descuento es: "+total
+Fin si 
+FIN
