@@ -1,0 +1,32 @@
+ Inicio 
+ num_litros, d[0- n]
+ precio_litro, d[0- n]
+ num_minutos, d[0- n]
+ precio_minuto, d[0- n]
+ descuento, d[0- 100]
+ total_agua, d[0- n]
+ total_telefono, d[0- n]
+ total_mensual, d[0- n]
+ edad, i[0- n]
+ Escribir "Ingrese el número de litros de agua consumidos en el mes"
+ Leer num_litros
+ Escribir "Ingrese el costo de cada litro de agua"
+ Leer precio_litro
+ Escribir "Ingrese el número de minutos de teléfono gastados en el mes"
+ Leer num_minutos
+ Escribir "Ingrese el costo de cada minuto de teléfono"
+ Leer precio_minuto
+ Escribir "Ingrese la edad de la persona"
+ Leer edad
+ total_agua<-- num_litros * precio_litro
+ total_telefono<-- num_minutos * precio_minuto
+ total_mensual<-- total_agua + total_telefono
+ Si  edad <20 entonces
+     descuento <-- total_mensual * 0.20
+     total_mensual<-- total_mensual - descuento
+     Escribir "Su valor total mensual con descuento a pagar es de:     
+                  "+total_mensual
+ De lo contrario
+     Escribir "Su valor total mensual es de "+total_mensual
+ Fin si 
+ Fin
